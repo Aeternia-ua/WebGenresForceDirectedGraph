@@ -50,13 +50,13 @@
 {"id": "стрім"},
 {"id": "лонгрід"},
 {"id": "Sound Stocks"},
-{"id": "audiojungle.net"},
+{"id": "AudioMaps"},
 {"id": "веб-комікс"},
 {"id": "мережевий фольклор"},
 {"id": "creepypasta"},
 {"id": "тревел-блог"},
 {"id": "Let's play"},
-{"id": "reactions"},
+{"id": "reactions video"},
 {"id": "селфі"},
 {"id": "рекламний банер"},
 {"id": "Мультимедійний тревел-блог"},
@@ -130,9 +130,18 @@
  ],
   "links": [
     {"source": "Текст", "target": "Мультимедійна історія"},
-   
-    {"source": "Текст", "target": "зорова поезія"},
-    {"source": "Образ", "target": "зорова поезія"},
+	
+	{"source": "ASCI-арт", "target": "Текст"},
+		{"source": "ASCI-арт", "target": "Образ"},
+	{"source": "Landing page", "target": "Текст"},
+	{"source": "хештег", "target": "Текст"},
+	{"source": "лонгрід", "target": "Текст"},
+	{"source": "Інтернет-листівки", "target": "Звук"},
+		{"source": "Інтернет-листівки", "target": "Образ"},
+    {"source": "зорова поезія", "target": "Текст"},
+		{"source": "зорова поезія", "target": "Образ"},
+	{"source": "Постери", "target": "Текст"},
+		{"source": "Loesje (Рута)", "target": "Постери"},
     {"source": "Дані", "target": "інфографіка"},
     {"source": "Дані", "target": "графіки"},
     
@@ -143,7 +152,6 @@
 	
 	
 	{"source": "мережевий фольклор", "target": "Текст"},
-	
 	 {"source": "wiki-реальність", "target": "мережевий фольклор"},
 	  {"source": "фан-переклад(notabenoid)", "target": "мережевий фольклор"},
 	   {"source": "creepypasta", "target": "мережевий фольклор"},
@@ -157,15 +165,69 @@
 	 {"source": "інтерактивний нон-фікшн", "target": "фанфікшн"},
 	 
 	  {"source": "Блогінг", "target": "Текст"},
+	  {"source": "селфі", "target": "Блогінг"},
+		{"source": "селфі", "target": "Образ"},
 	  {"source": "корпоративний блог", "target": "Блогінг"},
 	   {"source": "редакційний блог", "target": "Блогінг"},
 	    {"source": "пабліки", "target": "Блогінг"},
+		{"source": "живий мурал", "target": "Блогінг"},
 		 {"source": "фотоблог", "target": "Блогінг"},
+		 {"source": "Instagram stories", "target": "фотоблог"},
+		 {"source": "snapchat", "target": "фотоблог"},
+		 {"source": "messenger-content", "target": "snapchat"},
+			{"source": "telegram-канали", "target": "messenger-content"},
+			{"source": "telegram-боти", "target": "telegram-канали"},
+		 
 		  {"source": "пабліки", "target": "Блогінг"},
 		   {"source": "твіт", "target": "Блогінг"},
 		    {"source": "тревел-блог", "target": "Блогінг"},
+				{"source": "Мультимедійний тревел-блог", "target": "тревел-блог"},
+				{"source": "Мультимедійний тревел-блог", "target": "Мультимедійна історія"},
+				
+				{"source": "Мультимедійний фешн-блог", "target": "тревел-блог"},
+				{"source": "Мультимедійний фешн-блог", "target": "Мультимедійна історія"},
+			
 			 {"source": "Periscope", "target": "Текст"},
-			  {"source": "влог", "target": "Блогінг"}
+			  {"source": "влог", "target": "Блогінг"},
+			  {"source": "Q &amp; A", "target": "влог"},
+			  {"source": "Makeup\\Hair tutorial", "target": "влог"},
+			  {"source": "Haul Video", "target": "влог"},
+			  {"source": "360 VR video", "target": "влог"},
+				{"source": "360 VR video", "target": "іммерсивний сторітеллінг"},
+			  {"source": "reactions video", "target": "влог"},
+			  {"source": "Let's play", "target": "влог"},
+			  {"source": "video diary", "target": "влог"},
+			  {"source": "відео-конференції", "target": "влог"},
+			  
+			   {"source": "відеоколаж", "target": "влог"},
+				{"source": "fail/win compilations", "target": "відеоколаж"},
+				{"source": "video challenges", "target": "відеоколаж"},
+			   {"source": "YouTube creators community", "target": "влог"},
+			 {"source": "відео-конференції", "target": "влог"},	
+			 {"source": "vine", "target": "влог"},	
+			 
+	 {"source": "Образ", "target": "Мультимедійна історія"},
+	 {"source": "анімована книга", "target": "Образ"},
+	 {"source": "фотожаба", "target": "Образ"},
+	 {"source": "веб-комікс", "target": "Образ"},
+	 {"source": "Google Doodle", "target": "Образ"},
+		{"source": "Google Doodle", "target": "Текст"},
+	 {"source": "рекламний банер", "target": "Образ"},
+	 {"source": "Віртуальні тури", "target": "Образ"},
+	 
+	 {"source": "Звук", "target": "Мультимедійна історія"},
+	 {"source": "стрім", "target": "Звук"},
+		{"source": "Facebook-лайви", "target": "стрім"},
+		{"source": "Facebook-лайви", "target": "Блогінг"},
+	 {"source": "подкаст", "target": "Звук"},
+		{"source": "скрін-кастинг", "target": "подкаст"},
+		{"source": "Онлайн-лекторії", "target": "подкаст"},
+		{"source": "Онлайн-лекторії", "target": "інтерактивна мультимедійна історія"},
+	{"source": "стрім", "target": "Звук"},
+	 
+	 {"source": "Sound Stocks", "target": "Звук"},
+		{"source": "AudioMaps", "target": "Sound Stocks"}
+			  
   ]
 }
 
