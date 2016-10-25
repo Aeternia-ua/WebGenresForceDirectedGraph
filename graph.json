@@ -165,6 +165,15 @@
 		   {"source": "твіт", "target": "Блогінг"},
 		    {"source": "тревел-блог", "target": "Блогінг"},
 			 {"source": "Periscope", "target": "Текст"},
-			  {"source": "влог", "target": "Блогінг"}
+			  {"source": "влог", "target": "Блогінг"},
+	 			 {"source": "Q &amp; A", "target": "влог"},
+			  {"source": "Makeup\\Hair tutorial", "target": "влог"},
+			  {"source": "Haul Video", "target": "влог"},
+			  {"source": "360 VR video", "target": "влог"},
+				{"source": "360 VR video", "target": "іммерсивний сторітеллінг"},
+			  {"source": "reactions video", "target": "влог"},
+			  {"source": "Let's play", "target": "влог"},
+			  {"source": "video diary", "target": "влог"},
+			  {"source": "відео-конференції", "target": "влог"}
   ]
 }
