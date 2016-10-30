@@ -49,22 +49,24 @@ d3.json(dataURL, function(error, graph) {
   //Colors by 'group' value
       .attr("fill", function(d) { return color(d.group); })
   
- 
+  ///Placing labels at the nodes
+  
+  
   ////SHOWS TOOLTIP ON MOUSE HOVER
-//  .on('mouseover', function(d) {
-//      tooltip.transition()
-//        .duration(100)
-//        .style("opacity", 0.8);
-//      var tooltipHtml = "<span>" + d.id + "</span>";
-//      tooltip.html(tooltipHtml)
-//        .style("left", (d3.event.pageX + 5) + "px")
-//        .style("top", (d3.event.pageY - 50) + "px");
-//    })
-//    .on('mouseout', function() {
-//      tooltip.transition()
- //       .duration(200)
- //       .style("opacity", 0);
- //   })
+  .on('mouseover', function(d) {
+      tooltip.transition()
+        .duration(100)
+        .style("opacity", 0.8);
+      var tooltipHtml = "<span>" + d.id + "</span>";
+      tooltip.html(tooltipHtml)
+        .style("left", (d3.event.pageX + 5) + "px")
+        .style("top", (d3.event.pageY - 50) + "px");
+    })
+    .on('mouseout', function() {
+      tooltip.transition()
+        .duration(200)
+        .style("opacity", 0);
+    })
   
 .call(d3.drag()
           .on("start", dragstarted)
@@ -79,18 +81,6 @@ d3.json(dataURL, function(error, graph) {
       .links(graph.links);
   
 });
-
- ///Placing labels at the nodes
-		var nodeName = svg.selectAll(".mytext")
-						.data(dataset.nodes)
-						.enter()
-						.append("text")
-					    .text(function (d) { return d.id; })
-					    .style("text-anchor", "middle")
-					    .style("fill", "#555")
-					    .style("font-family", "Arial")
-					    .style("font-size", 12); 
-
 
 function ticked() {
   link.attr("x1", function(d) { return d.source.x; })
