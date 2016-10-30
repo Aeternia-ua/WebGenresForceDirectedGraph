@@ -17,13 +17,17 @@ d3.select("div#chartId")
 
 
 var color = d3.scaleOrdinal(d3.schemeCategory20c);
+var nodeRadius = 20;
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) {
         return d.id;
     }).distance(90))
     .force("charge", d3.forceManyBody().strength(-15))
-    .force("center", d3.forceCenter(width / 2, height / 2));
+    .force("center", d3.forceCenter(width / 2, height / 2))
+    .force("collide", d3.forceCollide().radius(function(d) {
+        return nodeRadius + 0.5; }).iterations(2))
+
 
 d3.json(dataURL, function(error, graph) {
     if (error) throw error;
@@ -78,7 +82,7 @@ d3.json(dataURL, function(error, graph) {
         .text(function(d) {
             return d.id
         });
-
+  
 
     simulation
         .nodes(graph.nodes)
@@ -109,19 +113,16 @@ d3.json(dataURL, function(error, graph) {
         .attr("cy", function(d) {
             return d.y;
         });
-
     labels
         .attr("x", function(d) {
             return d.x;
         })
         .attr("y", function(d) {
             return d.y;
-        });
+        }); 
 }
-  
+ 
 });
-
-
 
 function dragstarted(d) {
     if (!d3.event.active) simulation.alphaTarget(0.3).restart();
