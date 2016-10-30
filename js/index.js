@@ -4,13 +4,25 @@ var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height");
 
+//TO-DO make svg responsive
+d3.select("div#chartId")
+    .append("div")
+    .classed("svg-container", true) //container class to make  responsive svg
+    .append("svg")
+    //responsive SVG needs these 2 attributes and no width and height attr
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 600 400")
+    //class to make it responsive
+    .classed("svg-content-responsive", true);
+
+
 var color = d3.scaleOrdinal(d3.schemeCategory20c);
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) {
         return d.id;
-    }))
-    .force("charge", d3.forceManyBody().strength(-150))
+    }).distance(90))
+    .force("charge", d3.forceManyBody().strength(-15))
     .force("center", d3.forceCenter(width / 2, height / 2));
 
 d3.json(dataURL, function(error, graph) {
@@ -31,7 +43,7 @@ d3.json(dataURL, function(error, graph) {
         .data(graph.nodes)
         .enter().append("circle")
 
-    //Setting node radius by group value. If 'group' key doesn't exist, set radius to 8
+    //Setting node radius by group value. If 'group' key doesn't exist, set radius to 9
     .attr("r", function(d) {
             if (d.hasOwnProperty('group')) {
                 return d.group * 2;
