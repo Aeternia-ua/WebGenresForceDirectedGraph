@@ -5,6 +5,7 @@
 }
 
 .link {
+  font-family: "Roboto", Roboto, sans-serif;
   stroke: #999;
   stroke-width: 1.5px;
   pointer-events: none;
