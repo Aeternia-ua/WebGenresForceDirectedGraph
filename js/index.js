@@ -1,4 +1,4 @@
-var dataURL = "https://raw.githubusercontent.com/Aeternia-ua/temp1/c50fa778c12c6d355fe08b54cb3f1ce24acfa4e9/graphtest.json";
+var dataURL = "https://raw.githubusercontent.com/Aeternia-ua/WebGenresForceDirectedGraph/gh-pages/graph.json";
 
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
@@ -22,11 +22,11 @@ var nodeRadius = 20;
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) {
         return d.id;
-    }).distance(90))
-    .force("charge", d3.forceManyBody().strength(-15))
+    }).distance(80))
+    .force("charge", d3.forceManyBody().strength(-50))
     .force("center", d3.forceCenter(width / 2, height / 2))
     .force("collide", d3.forceCollide().radius(function(d) {
-        return nodeRadius + 0.5; }).iterations(2))
+        return nodeRadius + 0.5; }).iterations(4))
 
 
 d3.json(dataURL, function(error, graph) {
