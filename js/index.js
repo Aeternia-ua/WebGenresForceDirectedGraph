@@ -78,7 +78,7 @@ d3.json(dataURL, function(error, graph) {
         .enter().append("text")
         .attr("dx", 6)
         .attr("dy", ".35em")
-        .style("font-size", 8)
+        .style("font-size", 10)
         .text(function(d) {
             return d.id
         });
